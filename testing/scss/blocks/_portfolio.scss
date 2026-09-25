@@ -1,0 +1,30 @@
+.portfolio {
+  margin: 0 0 200px 0;
+
+  &__content {
+    display: flex;
+    gap: 180px;
+    padding: 0 30px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    font-size: 65px;
+    font-weight: 500;
+    line-height: 1.17;
+  }
+  &__text {
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 0 0 23px 0;
+  }
+
+  &__btn {
+    max-width: 378px;
+  }
+}

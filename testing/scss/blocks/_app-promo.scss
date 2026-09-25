@@ -1,0 +1,66 @@
+.app-promo {
+  margin: 0 0 280px 0;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 75px;
+    gap: 200px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 1.22;
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 1.58;
+    margin: 0 0 20px 0;
+  }
+
+  &__image {
+    flex-shrink: 0;
+
+    &--big {
+      margin: 130px 0 0 0;
+    }
+
+    &--medium {
+      margin: -65px 70px 0 -120px;
+    }
+  }
+
+  &__stores {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 245px;
+    height: 70px;
+    border: solid 1px #fff;
+    border-radius: 35px;
+    padding: 10px 20px;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,45 @@
+@use "../globals/variables" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 377px;
+  padding: 33px 28px;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 20px;
+  background: linear-gradient(
+    95deg,
+    #dc6b30 0%,
+    #e4864f 35%,
+    #ffbe82 75%,
+    #e49031 100%
+  );
+  color: $color-black;
+  box-shadow:
+    0 4px 0 0 #8f4119,
+    0 3px 49px -3px rgba(226, 128, 72, 0.76);
+
+  &:hover {
+    box-shadow:
+      0 4px 0 0 #8f4119,
+      0 3px 49px -3px rgb(255, 164, 112);
+  }
+
+  &--secondary {
+    background: transparent;
+    font-weight: 400;
+    color: $color-white;
+    box-shadow: none;
+    border: 2px solid $color-orange;
+
+    &:hover {
+      box-shadow: 0 3px 49px -3px rgb(255, 164, 112);
+    }
+  }
+
+  &--sm {
+    padding: 15px 28px;
+  }
+}

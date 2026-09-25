@@ -1,0 +1,57 @@
+.lang-select {
+  position: relative;
+  display: inline-block;
+  font-family: sans-serif;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 4px 6px;
+  }
+
+  &__flag {
+    display: flex;
+  }
+
+  &__icon {
+    width: 13px;
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #141416;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 4px;
+    margin-top: 4px;
+  }
+
+  &__dropdown--open {
+    display: block;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  &__option:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

@@ -1,0 +1,96 @@
+.bonus {
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  margin: 0 0 233px 0;
+
+  &__img {
+    position: absolute;
+    top: -405px;
+    pointer-events: none;
+
+    &--left {
+      left: -64px;
+    }
+
+    &--right {
+      right: 0;
+
+      &-mid {
+        top: -66px;
+        right: 30px;
+      }
+
+      &-top {
+        top: -279px;
+        right: -95px;
+      }
+
+      &-bot {
+        top: -295px;
+        right: -94px;
+      }
+    }
+  }
+
+  &__glow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 550px;
+    height: 550px;
+    background: rgba(66, 102, 64, 0.5);
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+    z-index: 0;
+
+    &--left {
+      left: -200px;
+    }
+
+    &--right {
+      right: -200px;
+    }
+  }
+
+  &::before {
+    content: "БОНУС";
+    position: absolute;
+    top: -135px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(61, 79, 59, 1) 0%,
+      rgba(61, 79, 59, 0) 100%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 120%;
+    margin: 0 0 35px 0;
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 158%;
+    margin: 0 0 59px 0;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+}

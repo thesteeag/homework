@@ -1,0 +1,63 @@
+$bg-color: #121316; // Фон карточки/страницы
+$green-light: #62e792; // Верхний градиент
+$green-main: #3dbd69; // Основной зеленый
+$text-color: #e5e5e7;
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 54px;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .radio__custom {
+      border-color: transparent;
+      background: linear-gradient(135deg, $green-light, $green-main);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:focus-visible + .radio__custom {
+      outline: 2px solid $green-main;
+      outline-offset: 2px;
+    }
+  }
+
+  &__custom {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid $green-main;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-color: $bg-color;
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+  }
+
+  &__label {
+    font-size: 25px;
+    color: $text-color;
+  }
+}

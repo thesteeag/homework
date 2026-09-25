@@ -1,0 +1,22 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+
+  input {
+    width: 383px;
+    height: 106px;
+    background-color: #202020;
+    border: 4px solid #ffffff4a;
+    border-radius: 20px;
+    font-size: 22px;
+    padding: 35px 40px;
+    color: #fff;
+    outline: none;
+
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.advantage {
+  margin: 0 0 138px 0;
+
+  &__title {
+    text-align: center;
+    font-size: 70px;
+    line-height: 1.17;
+    margin: 0 0 85px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px 22px;
+  }
+
+  &__item {
+    display: contents;
+  }
+
+  &__card {
+    position: relative;
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    gap: 34px;
+    padding: 53px 45px 33px 45px;
+    background-color: #1b1b1c;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover {
+      background-color: #262628;
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+
+      .advantage__card-title {
+        color: #4cd97b;
+      }
+
+      .advantage__card-text {
+        color: #4cd97b;
+      }
+
+      .advantage__card-btn {
+        text-decoration-color: #4cd97b;
+      }
+
+      .advantage__card-btn-icon {
+        transform: translateX(6px);
+        color: #4cd97b;
+      }
+
+      .advantage__card-btn-text {
+        color: #4cd97b;
+      }
+    }
+
+    &-img {
+      width: 48px;
+      height: 48px;
+    }
+
+    &-title {
+      font-size: 26px;
+      line-height: 1.25;
+      transition: color 0.3s ease;
+    }
+
+    &-text {
+      font-size: 22px;
+      font-weight: 300;
+      transition: color 0.3s ease;
+    }
+
+    &-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 18px;
+      justify-self: end;
+      align-self: end;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      margin: -18px -18px 0 0;
+      transition: color 0.3s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        cursor: pointer;
+      }
+
+      &-text {
+        transition: color 0.3s ease;
+      }
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+        stroke: currentColor;
+        fill: none;
+        flex-shrink: 0;
+        transition:
+          transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          stroke 0.3s ease,
+          color 0.3s ease;
+      }
+    }
+  }
+}

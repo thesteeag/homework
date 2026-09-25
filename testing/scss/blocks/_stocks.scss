@@ -1,0 +1,79 @@
+@use "./../globals/variables" as *;
+
+.stocks {
+  margin: 0 0 152px 0;
+
+  &__title {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 117%;
+    text-align: center;
+    max-width: 851px;
+    margin: 0 auto 27px;
+    display: flex;
+  }
+
+  &__text {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 158%;
+    text-align: center;
+    margin: 0 auto 35px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 142px;
+    width: 100%;
+    margin: 109px 0 130px 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(odd) {
+      transform: translateY(28px);
+    }
+
+    &:nth-child(even) {
+      transform: translateY(-28px);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    &-icon {
+      width: 144px;
+      height: 144px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-white;
+      border-radius: 24px;
+    }
+
+    &-percent {
+      font-size: 30px;
+      color: $color-green;
+    }
+
+    &-sum {
+      font-size: 20px;
+      padding: 3px 13px;
+      background-color: $color-light-black;
+      border-radius: 18px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}

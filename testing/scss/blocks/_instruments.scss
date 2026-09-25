@@ -1,0 +1,101 @@
+@use "./../globals/variables" as *;
+
+.instruments {
+  margin: 0 0 122px 0;
+
+  &__title {
+    font-size: 70px;
+    text-align: center;
+    margin: 0 0 88px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 111px 110px;
+    padding: 108px 84px;
+    background-color: $color-white;
+    color: $color-black;
+    position: relative;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+
+    &-img {
+      width: 120px;
+      height: 120px;
+      border: 2px solid $color-black;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-icon {
+      width: 47px;
+      height: 47px;
+    }
+
+    &-title {
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    &-text {
+      font-size: 19px;
+    }
+  }
+
+  &__support {
+    &-btn {
+      position: absolute;
+      right: 0px;
+      top: 370px;
+      border-radius: 5px;
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      background-color: $color-light-black;
+      color: $color-white;
+      padding: 5px;
+    }
+
+    &-icon {
+      fill: currentColor;
+      width: 38px;
+      height: 47px;
+    }
+
+    &-text {
+      font-size: 13px;
+      line-height: 50%;
+    }
+  }
+
+  &__up-btn {
+    position: absolute;
+    right: 32px;
+    bottom: 38px;
+    display: flex;
+    background-color: $color-light-gray;
+    color: $color-white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+}

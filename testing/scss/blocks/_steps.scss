@@ -1,0 +1,75 @@
+.steps {
+  margin: 0 0 437px 0;
+
+  &__title {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 22px 0;
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 158%;
+    text-align: center;
+    margin: 0 0 90px 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 28px;
+    counter-reset: step-counter;
+  }
+
+  &__item {
+    display: contents;
+  }
+
+  &__card {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      top: -63px;
+      right: 10px;
+      z-index: -1;
+      font-size: 300px;
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(
+        180deg,
+        rgba(61, 79, 59, 1) 0%,
+        rgba(61, 79, 59, 0) 100%
+      );
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &-number {
+      font-size: 21px;
+      line-height: 130%;
+    }
+
+    &-title {
+      font-size: 35px;
+      line-height: 130%;
+      margin: 0 0 10px 0;
+    }
+
+    &-text {
+      font-size: 22px;
+      line-height: 159%;
+    }
+  }
+}

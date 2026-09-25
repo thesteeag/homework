@@ -1,0 +1,27 @@
+@use "./globals/variables";
+@use "./globals/fonts";
+@use "./globals/normalize";
+@use "./globals/reboot";
+@use "./globals/container";
+
+@use "./blocks/btn";
+@use "./blocks/header";
+@use "./blocks/language";
+@use "./blocks/main-nav";
+@use "./blocks/hero";
+@use "./blocks/timer";
+@use "./blocks/stocks";
+@use "./blocks/instruments";
+@use "./blocks/steps";
+@use "./blocks/bonus";
+@use "./blocks/advantage";
+@use "./blocks/portfolio";
+@use "./blocks/gauge";
+@use "./blocks/radio";
+@use "./blocks/stats";
+@use "./blocks/app-promo";
+@use "./blocks/faq";
+@use "./blocks/accordion";
+@use "./blocks/request";
+@use "./blocks/form";
+@use "./blocks/footer";

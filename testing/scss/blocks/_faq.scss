@@ -1,0 +1,36 @@
+.faq {
+  margin: 0 0 200px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 85px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+  }
+
+  &__right {
+    margin: 40px 0 0 0;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 1.17;
+    margin: 0 0 26px;
+  }
+
+  &__text {
+    font-size: 22px;
+    line-height: 1.59;
+  }
+
+  &__btn {
+    margin: auto 0 0 0;
+  }
+}
