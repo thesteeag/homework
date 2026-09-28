@@ -42,7 +42,6 @@
     margin: 109px 0 130px 0;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 
     @include vp-375 {
       gap: 16px;
@@ -54,6 +53,7 @@
         black 85%,
         transparent 100%
       );
+      overflow: hidden;
     }
   }
 

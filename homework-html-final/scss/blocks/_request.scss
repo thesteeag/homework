@@ -49,12 +49,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     counter-reset: request-counter;
-    margin: 0 0 20px 0;
+    margin: 0 0 130px 0;
 
     @include vp-375 {
       display: flex;
       flex-direction: column;
       gap: 20px;
+      margin: 0 0 20px 0;
     }
   }
 

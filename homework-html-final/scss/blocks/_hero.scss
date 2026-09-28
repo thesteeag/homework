@@ -3,7 +3,10 @@
 .hero {
   position: relative;
   height: 100vh;
-  overflow: hidden;
+
+  @include vp-375 {
+    overflow: hidden;
+  }
 
   &__content {
     position: relative;

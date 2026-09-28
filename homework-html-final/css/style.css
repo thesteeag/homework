@@ -387,7 +387,11 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  overflow: hidden;
+}
+@media (max-width: 375px) {
+  .hero {
+    overflow: hidden;
+  }
 }
 .hero__content {
   position: relative;
@@ -681,13 +685,13 @@ body {
   margin: 109px 0 130px 0;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 @media (max-width: 375px) {
   .stocks__list {
     gap: 16px;
     margin: 0 0 10px 0;
     -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    overflow: hidden;
   }
 }
 .stocks__item {
@@ -1922,13 +1926,14 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   counter-reset: request-counter;
-  margin: 0 0 20px 0;
+  margin: 0 0 130px 0;
 }
 @media (max-width: 375px) {
   .request__steps {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin: 0 0 20px 0;
   }
 }
 .request__card {
