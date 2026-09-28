@@ -1,0 +1,140 @@
+@use "../globals/mixin" as *;
+
+.app-promo {
+  margin: 0 0 280px 0;
+
+  @include vp-375 {
+    margin: 0 0 20px 0;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 75px;
+    gap: 200px;
+
+    @include vp-375 {
+      padding: 0;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @include vp-375 {
+      gap: 10px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include vp-375 {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 1.22;
+
+    @include vp-375 {
+      font-size: 25px;
+    }
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 1.58;
+    margin: 0 0 20px 0;
+
+    @include vp-375 {
+      font-size: 12px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    position: relative;
+
+    &--big {
+      margin: 130px 0 0 0;
+
+      @include vp-375 {
+        margin: 0;
+      }
+    }
+
+    &--medium {
+      margin: -65px 70px 0 -120px;
+
+      @include vp-375 {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 650px;
+        height: 650px;
+        background: radial-gradient(
+          circle,
+          rgba(76, 155, 102, 0.925) 0%,
+          rgba(75, 120, 90, 0.85) 10%,
+          transparent 70%
+        );
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__image-src {
+    @include vp-375 {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__stores {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 245px;
+    height: 70px;
+    border: solid 1px var(--color-white);
+    border-radius: 35px;
+    padding: 10px 20px;
+
+    @include vp-375 {
+      width: 100%;
+      height: auto;
+      padding: 5px 10px;
+    }
+
+    &-text {
+      @include vp-375 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

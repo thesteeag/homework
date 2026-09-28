@@ -1,0 +1,105 @@
+@use "../globals/mixin" as *;
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  width: 100%;
+
+  @include vp-375 {
+    gap: 15px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    font-size: 40px;
+    width: 100%;
+
+    @include vp-375 {
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    &::before {
+      content: "?";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background-color: #24242d;
+      border-radius: 50%;
+
+      @include vp-375 {
+        font-size: 22px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        background: linear-gradient(135deg, #6ba758, #23503d);
+        color: var(--color-white);
+      }
+
+      .accordion__icon-arrow,
+      .accordion__icon-circle {
+        color: #62666f;
+      }
+    }
+  }
+
+  &__title {
+    @include vp-375 {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    color: #272932;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    margin: 0 0 0 auto;
+
+    @include vp-375 {
+      width: 25px;
+      height: 25px;
+      margin: 0;
+    }
+  }
+
+  &__icon-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon-arrow {
+    width: 23px;
+    height: 13px;
+
+    @include vp-375 {
+      position: absolute;
+      width: 15px;
+      height: 10px;
+      top: 9px;
+    }
+  }
+}

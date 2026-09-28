@@ -1,0 +1,58 @@
+@use "../globals/mixin" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 377px;
+  padding: 33px 28px;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 20px;
+  background: linear-gradient(
+    95deg,
+    #dc6b30 0%,
+    #e4864f 35%,
+    #ffbe82 75%,
+    #e49031 100%
+  );
+  color: var(--color-black);
+  box-shadow:
+    0 4px 0 0 var(--color-dark-orange),
+    0 3px 49px -3px rgba(226, 128, 72, 0.76);
+
+  &:hover {
+    box-shadow:
+      0 4px 0 0 var(--color-dark-orange),
+      0 3px 49px -3px rgb(255, 164, 112);
+  }
+
+  &--secondary {
+    background: var(--color-black);
+    font-weight: 400;
+    color: var(--color-white);
+    box-shadow: none;
+    border: 2px solid var(--color-orange);
+
+    &:hover {
+      box-shadow: 0 3px 49px -3px rgb(255, 164, 112);
+    }
+  }
+
+  &--sm {
+    padding: 15px 28px;
+  }
+
+  @include vp-375 {
+    padding: 12px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    min-width: 109px;
+
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
