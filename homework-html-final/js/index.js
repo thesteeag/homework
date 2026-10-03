@@ -6,5 +6,4 @@ import { initPhoneMask } from "./phoneMask.js";
 langBtnClick();
 updateTimer();
 initGauge();
-
 initPhoneMask("#phone");

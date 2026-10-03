@@ -1,5 +1,5 @@
 // Укажите целевую дату окончания таймера
-const targetDate = new Date("2026-09-31T23:59:59").getTime();
+const targetDate = new Date("2027-02-03T23:59:59").getTime();
 
 export default function updateTimer() {
   const now = new Date().getTime();

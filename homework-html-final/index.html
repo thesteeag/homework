@@ -30,7 +30,12 @@
           <div class="lang-select">
             <button class="lang-select__btn" id="langBtn" type="button">
               <span class="lang-select__flag" id="langCurrentFlag">
-                <svg width="23" height="23" viewBox="0 0 24 24">
+                <svg
+                  class="lang-select__flag-icon"
+                  width="23"
+                  height="23"
+                  viewBox="0 0 24 24"
+                >
                   <g clip-path="url(#r)">
                     <circle cx="12" cy="12" r="12" fill="#fff" />
                     <path d="M0 8h24v16H0z" fill="#0039a6" />
@@ -112,15 +117,10 @@
             </ul>
           </nav>
           <div class="header__actions">
-            <button
-              class="btn btn--secondary btn--sm header__actions-login"
-              type="button"
-            >
+            <button class="btn btn--secondary btn--sm" type="button">
               Войти
             </button>
-            <button class="btn btn--sm header__actions-btn" type="button">
-              Открыть счет
-            </button>
+            <button class="btn btn--sm" type="button">Открыть счет</button>
           </div>
         </div>
       </div>
@@ -914,15 +914,9 @@
             </div>
             <div class="faq__right">
               <div class="accordion">
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Есть ли плата за обслуживание?"
-                  >
-                    <span class="accordion__title">
-                      Есть ли плата за обслуживание?</span
-                    >
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Есть ли плата за обслуживание?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -935,17 +929,17 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Как вывести деньги со счёта?"
-                  >
-                    <span class="accordion__title"
-                      >Как вывести деньги со счёта?</span
-                    >
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Как вывести деньги со счёта?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -958,15 +952,17 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Какие налоги?"
-                  >
-                    <span class="accordion__title">Какие налоги?</span>
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Какие налоги?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -979,15 +975,17 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Где хранятся деньги?"
-                  >
-                    <span class="accordion__title">Где хранятся деньги?</span>
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Где хранятся деньги?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -1000,16 +998,17 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Как открыть счёт?"
-                  >
-                    <span class="accordion__title">Как открыть счёт?</span>
-
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Как открыть счёт?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -1022,15 +1021,17 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Как пополнить счёт?"
-                  >
-                    <span class="accordion__title">Как пополнить счёт?</span>
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Как пополнить счёт?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -1043,15 +1044,17 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
-                <div class="accordion__item">
-                  <button
-                    class="accordion__header"
-                    type="button"
-                    aria-label="Открыть раздел: Что купить?"
-                  >
-                    <span class="accordion__title">Что купить?</span>
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
+                <details class="accordion__item" name="faq">
+                  <summary class="accordion__title">
+                    Что купить?
                     <div class="accordion__btn">
                       <svg class="accordion__icon-circle">
                         <use
@@ -1064,8 +1067,14 @@
                         ></use>
                       </svg>
                     </div>
-                  </button>
-                </div>
+                  </summary>
+                  <p class="accordion__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Quisquam sed vero distinctio recusandae saepe officia unde.
+                    Possimus, repellat libero vitae, magnam veritatis autem nemo
+                    ratione, fuga unde repellendus iste voluptatibus?
+                  </p>
+                </details>
               </div>
             </div>
           </div>
@@ -1086,12 +1095,10 @@
               <div class="request__arrow">
                 <svg class="request__arrow-dot">
                   <use href="images/sprite/request-icon-ellipse.svg"></use>
-                  <!-- Подставь путь к своей иконке кружка -->
                 </svg>
                 <span class="request__arrow-line"></span>
                 <svg class="request__arrow-head">
                   <use href="images/sprite/request-icon-arrow.svg"></use>
-                  <!-- Подставь путь к своей иконке стрелки -->
                 </svg>
               </div>
               <p class="request__card-title">Оставьте заявку на сайте</p>
@@ -1141,6 +1148,7 @@
           <form class="form" action="#" method="POST">
             <div class="form__group">
               <input
+                class="form__input"
                 type="text"
                 name="user-name"
                 placeholder="Ваше имя"
@@ -1149,6 +1157,7 @@
             </div>
             <div class="form__group">
               <input
+                class="form__input"
                 type="tel"
                 name="user-phone"
                 id="phone"
@@ -1158,6 +1167,7 @@
             </div>
             <div class="form__group">
               <input
+                class="form__input"
                 type="email"
                 name="user-email"
                 placeholder="E-mail"
@@ -1165,7 +1175,9 @@
               />
             </div>
             <div class="form__submit">
-              <button class="btn" type="submit">Оставить заявку</button>
+              <button class="btn form__submit-btn" type="submit">
+                Оставить заявку
+              </button>
             </div>
           </form>
         </div>
@@ -1210,7 +1222,9 @@
           </div>
           <div class="footer__action">
             <span class="footer__text">Звонок по России бесплатный</span>
-            <span class="footer__phone">8 (495) 212-16-71</span>
+            <a class="footer__phone" href="tel:+84952121671F"
+              >8 (495) 212-16-71</a
+            >
             <button class="btn footer__btn" type="button">
               Перезвоните мне
             </button>

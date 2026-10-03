@@ -6,7 +6,7 @@
   isolation: isolate;
   margin: 0 0 233px 0;
 
-  @include vp-375 {
+  @include vp-991 {
     margin: 0 0 20px 0;
   }
 
@@ -14,13 +14,18 @@
     position: absolute;
     top: -405px;
     pointer-events: none;
+    z-index: -1;
 
-    @include vp-375 {
+    @include vp-991 {
       display: none;
     }
 
     &--left {
       left: -64px;
+
+      @include vp-1150 {
+        display: none;
+      }
     }
 
     &--right {
@@ -55,12 +60,15 @@
     pointer-events: none;
     z-index: 0;
 
-    @include vp-375 {
+    @include vp-991 {
       display: none;
     }
 
     &--left {
       left: -200px;
+      @include vp-1150 {
+        display: none;
+      }
     }
 
     &--right {
@@ -89,7 +97,7 @@
     user-select: none;
     pointer-events: none;
 
-    @include vp-375 {
+    @include vp-991 {
       display: none;
     }
   }
@@ -99,7 +107,11 @@
     line-height: 120%;
     margin: 0 0 35px 0;
 
-    @include vp-375 {
+    @include vp-1315 {
+      font-size: 55px;
+    }
+
+    @include vp-991 {
       font-size: 25px;
       margin: 0 0 10px 0;
     }
@@ -110,7 +122,11 @@
     line-height: 158%;
     margin: 0 0 59px 0;
 
-    @include vp-375 {
+    @include vp-1315 {
+      font-size: 20px;
+    }
+
+    @include vp-991 {
       font-size: 12px;
       margin: 0 0 10px 0;
     }

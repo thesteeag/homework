@@ -3,7 +3,7 @@
 .advantage {
   margin: 0 0 138px 0;
 
-  @include vp-375 {
+  @include vp-991 {
     margin: 0 0 20px 0;
   }
 
@@ -13,7 +13,11 @@
     line-height: 1.17;
     margin: 0 0 85px 0;
 
-    @include vp-375 {
+    @include vp-1315 {
+      font-size: 55px;
+    }
+
+    @include vp-991 {
       font-size: 25px;
       margin: 0 0 20px 0;
     }
@@ -24,7 +28,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 22px 22px;
 
-    @include vp-375 {
+    @include vp-1315 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include vp-575 {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -48,7 +56,11 @@
       border-color 0.3s ease,
       transform 0.3s ease;
 
-    @include vp-375 {
+    @include vp-1510 {
+      padding: 20px;
+    }
+
+    @include vp-991 {
       padding: 10px;
       gap: 10px;
     }
@@ -85,7 +97,7 @@
     }
 
     &-icon {
-      @include vp-375 {
+      @include vp-991 {
         width: 44px;
         height: 44px;
       }
@@ -96,8 +108,16 @@
       line-height: 1.25;
       transition: color 0.3s ease;
 
-      @include vp-375 {
-        font-size: 15px;
+      @include vp-1630 {
+        font-size: 23px;
+      }
+
+      @include vp-1315 {
+        font-size: 19px;
+      }
+
+      @include vp-991 {
+        font-size: 13px;
       }
     }
 
@@ -106,7 +126,11 @@
       font-weight: 300;
       transition: color 0.3s ease;
 
-      @include vp-375 {
+      @include vp-1315 {
+        font-size: 17px;
+      }
+
+      @include vp-991 {
         font-size: 12px;
       }
     }
@@ -123,7 +147,11 @@
       margin: -18px -18px 0 0;
       transition: color 0.3s ease;
 
-      @include vp-375 {
+      @include vp-1510 {
+        margin: 0;
+      }
+
+      @include vp-991 {
         font-size: 12px;
         margin: 0;
       }
@@ -151,7 +179,7 @@
           stroke 0.3s ease,
           color 0.3s ease;
 
-        @include vp-375 {
+        @include vp-991 {
           width: 10px;
           height: 10px;
         }

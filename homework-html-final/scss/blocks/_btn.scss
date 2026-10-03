@@ -4,10 +4,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 377px;
+  width: 100%;
+  max-width: 377px;
+  min-width: 145px;
   padding: 33px 28px;
   font-weight: 700;
   font-size: 22px;
+  white-space: nowrap;
   border-radius: 20px;
   background: linear-gradient(
     95deg,
@@ -21,10 +24,29 @@
     0 4px 0 0 var(--color-dark-orange),
     0 3px 49px -3px rgba(226, 128, 72, 0.76);
 
+  @include vp-1315 {
+    font-size: 16px;
+    border-radius: 13px;
+    padding: 20px 18px;
+  }
+
+  @include vp-991 {
+    padding: 12px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: none;
+    min-width: 75px;
+    max-width: 295px;
+  }
+
   &:hover {
     box-shadow:
       0 4px 0 0 var(--color-dark-orange),
       0 3px 49px -3px rgb(255, 164, 112);
+
+    @include vp-991 {
+      box-shadow: none;
+    }
   }
 
   &--secondary {
@@ -36,23 +58,36 @@
 
     &:hover {
       box-shadow: 0 3px 49px -3px rgb(255, 164, 112);
+
+      @include vp-991 {
+        box-shadow: none;
+      }
     }
   }
 
   &--sm {
-    padding: 15px 28px;
-  }
+    width: auto;
+    height: 60px;
+    padding: 0 50px;
+    font-size: 18px;
 
-  @include vp-375 {
-    padding: 12px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    min-width: 109px;
+    @include vp-1630 {
+      padding: 0 35px;
+    }
 
-    box-shadow: none;
+    @include vp-1315 {
+      font-size: 15px;
+      padding: 0 13px;
+      height: 50px;
+    }
 
-    &:hover {
-      box-shadow: none;
+    @include vp-1150 {
+      font-size: 13px;
+    }
+
+    @include vp-991 {
+      height: 40px;
+      padding: 0 25px;
     }
   }
 }

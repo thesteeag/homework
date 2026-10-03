@@ -9,7 +9,11 @@
   backdrop-filter: blur(12px);
   padding: 32px 0;
 
-  @include vp-375 {
+  @include vp-1315 {
+    padding: 20px 0;
+  }
+
+  @include vp-991 {
     position: static;
     padding: 15px 0;
   }
@@ -19,7 +23,7 @@
     align-items: center;
     gap: 37px;
 
-    @include vp-375 {
+    @include vp-1510 {
       gap: 10px;
     }
   }
@@ -27,13 +31,17 @@
   &__burger {
     display: none;
 
-    @include vp-375 {
-      display: block;
+    @include vp-991 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
     &-icon {
       width: 20px;
       height: 20px;
+      flex-shrink: 0;
     }
   }
 
@@ -44,7 +52,16 @@
     transform: translateY(-9px);
     flex-shrink: 0;
 
-    @include vp-375 {
+    @include vp-1315 {
+      width: 130px;
+    }
+
+    @include vp-1150 {
+      width: 100px;
+      transform: translateY(-6px);
+    }
+
+    @include vp-991 {
       width: 90px;
       transform: translateY(-3px);
     }
@@ -57,33 +74,15 @@
   &__actions {
     display: flex;
     gap: 20px;
-    margin-left: auto;
+    justify-content: flex-end;
 
-    @include vp-375 {
+    @include vp-991 {
       gap: 5px;
     }
 
-    &-login {
-      min-width: 113px;
-      font-weight: 400;
-      font-size: 18px;
-
-      @include vp-375 {
-        font-size: 12px;
-        min-width: min-content;
-        padding: 4px 10px;
-      }
-    }
-
-    &-btn {
-      min-width: 234px;
-      font-size: 18px;
-
-      @include vp-375 {
-        font-size: 12px;
-        min-width: min-content;
-        padding: 4px 10px;
-      }
+    @include vp-767 {
+      justify-content: flex-end;
+      margin: 0 0 0 auto;
     }
   }
 }

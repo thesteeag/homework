@@ -6,24 +6,47 @@
   gap: 63px;
   width: 100%;
 
-  @include vp-375 {
+  @include vp-1510 {
+    gap: 40px;
+  }
+
+  @include vp-991 {
     gap: 15px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   &__item {
     display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
-  &__header {
+  &__title {
+    flex-grow: 1;
+    text-align: start;
+    list-style: none;
     display: flex;
-    align-items: center;
-    gap: 80px;
     font-size: 40px;
-    width: 100%;
+    line-height: 1.17;
+    gap: 115px;
 
-    @include vp-375 {
-      gap: 10px;
-      justify-content: space-between;
+    @include vp-1710 {
+      gap: clamp(
+        20px,
+        calc(20px + (80px - 20px) * ((100vw - 992px) / (1790px - 992px))),
+        80px
+      );
+      font-size: 35px;
+    }
+
+    @include vp-1510 {
+      font-size: 27px;
+    }
+
+    @include vp-991 {
+      font-size: 20px;
+      text-align: center;
     }
 
     &::before {
@@ -37,7 +60,12 @@
       background-color: #24242d;
       border-radius: 50%;
 
-      @include vp-375 {
+      @include vp-1510 {
+        width: 35px;
+        height: 35px;
+      }
+
+      @include vp-991 {
         font-size: 22px;
         width: 25px;
         height: 25px;
@@ -57,13 +85,6 @@
     }
   }
 
-  &__title {
-    @include vp-375 {
-      font-size: 20px;
-      text-align: center;
-    }
-  }
-
   &__btn {
     color: #272932;
 
@@ -76,10 +97,14 @@
     flex-shrink: 0;
     margin: 0 0 0 auto;
 
-    @include vp-375 {
+    @include vp-1510 {
+      width: 35px;
+      height: 35px;
+    }
+
+    @include vp-991 {
       width: 25px;
       height: 25px;
-      margin: 0;
     }
   }
 
@@ -95,11 +120,36 @@
     width: 23px;
     height: 13px;
 
-    @include vp-375 {
+    @include vp-1510 {
       position: absolute;
+      top: 12px;
+    }
+
+    @include vp-991 {
       width: 15px;
       height: 10px;
       top: 9px;
+    }
+  }
+
+  &__text {
+    font-size: 22px;
+    padding: 0 160px;
+
+    @include vp-1710 {
+      padding-inline: clamp(
+        45px,
+        calc(45px + (160px - 45px) * ((100vw - 992px) / (1790px - 992px))),
+        160px
+      );
+    }
+
+    @include vp-1315 {
+      font-size: 20px;
+    }
+
+    @include vp-991 {
+      font-size: 12px;
     }
   }
 }

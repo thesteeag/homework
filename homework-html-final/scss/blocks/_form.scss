@@ -6,20 +6,27 @@
   gap: 20px;
   align-items: center;
 
-  @include vp-375 {
+  @include vp-1510 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+  }
+
+  @include vp-991 {
     display: flex;
     flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
     gap: 10px;
   }
 
   &__group {
-    @include vp-375 {
+    @include vp-991 {
       width: 100%;
     }
   }
 
-  input {
-    width: 383px;
+  &__input {
+    width: 100%;
     height: 106px;
     background-color: var(--color-light-gray);
     border: 4px solid #ffffff4a;
@@ -29,7 +36,16 @@
     color: var(--color-white);
     outline: none;
 
-    @include vp-375 {
+    @include vp-1630 {
+      padding: 20px;
+      height: auto;
+    }
+
+    @include vp-1315 {
+      font-size: 20px;
+    }
+
+    @include vp-991 {
       width: 100%;
       height: auto;
       font-size: 12px;
@@ -40,6 +56,19 @@
 
     &::placeholder {
       color: var(--color-white);
+    }
+  }
+
+  &__submit {
+    @include vp-1510 {
+      grid-column: 2;
+    }
+
+    &-btn {
+      padding: 20px;
+      @include vp-1510 {
+        max-width: 100%;
+      }
     }
   }
 }
