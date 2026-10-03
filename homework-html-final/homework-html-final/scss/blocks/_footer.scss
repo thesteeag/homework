@@ -1,0 +1,99 @@
+@use "../globals/mixin" as *;
+
+.footer {
+  padding: 60px 0 100px 0;
+  background-color: var(--color-light-gray);
+
+  @include vp-991 {
+    padding: 30px 0 50px 0;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+
+    @include vp-991 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin: 0 0 -13px 0;
+
+    @include vp-991 {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    width: 180px;
+    height: auto;
+
+    @include vp-991 {
+      width: 100%;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 13px;
+    padding: 0 0 0 10px;
+    margin: 0 0 24px 0;
+
+    @include vp-991 {
+      padding: 0;
+      margin: 0 0 10px 0;
+      justify-content: center;
+    }
+
+    &-icon {
+      color: rgba(255, 255, 255, 0.2);
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    text-decoration: underline;
+    text-align: center;
+
+    @include vp-991 {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 30px 0 0;
+
+    @include vp-991 {
+      padding: 0;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__phone {
+    font-size: 24px;
+  }
+
+  &__btn {
+    min-width: 274px;
+    height: 71px;
+    padding: 18px 25px;
+  }
+}

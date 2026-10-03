@@ -1,0 +1,26 @@
+@use "mixin" as *;
+
+.container {
+  width: min(100% - 220px, 1920px);
+  margin-inline: auto;
+
+  @include vp-1710 {
+    width: calc(100% - 140px);
+  }
+
+  @include vp-1315 {
+    width: calc(100% - 60px);
+  }
+
+  @include vp-1150 {
+    width: calc(100% - 40px);
+  }
+
+  @include vp-991 {
+    width: calc(100% - 32px);
+  }
+
+  @include vp-767 {
+    width: calc(100% - 32px);
+  }
+}

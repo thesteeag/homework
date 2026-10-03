@@ -1,0 +1,190 @@
+@use "../globals/mixin" as *;
+
+.app-promo {
+  margin: 0 0 280px 0;
+
+  @include vp-1510 {
+    margin: 0 0 150px;
+  }
+
+  @include vp-1315 {
+    margin: 0 0 100px 0;
+  }
+
+  @include vp-991 {
+    margin: 0 0 40px 0;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 75px;
+    gap: 200px;
+
+    @include vp-1510 {
+      padding: 0;
+    }
+
+    @include vp-1315 {
+      gap: 100px;
+    }
+
+    @include vp-991 {
+      padding: 0;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
+    gap: 25px;
+
+    @include vp-991 {
+      gap: 10px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include vp-1024 {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 1.22;
+
+    @include vp-1315 {
+      font-size: 55px;
+    }
+
+    @include vp-991 {
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 1.58;
+    margin: 0 0 20px 0;
+
+    @include vp-1315 {
+      font-size: 20px;
+    }
+
+    @include vp-991 {
+      font-size: 12px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__image {
+    flex: 0 1 auto;
+    position: relative;
+
+    &--big {
+      margin: 130px 0 0 0;
+
+      @include vp-1024 {
+        margin: 0;
+      }
+    }
+
+    &--medium {
+      margin: -65px 70px 0 -120px;
+
+      @include vp-1315 {
+        margin: -65px 0 -120px;
+      }
+
+      @include vp-1024 {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 650px;
+        height: 650px;
+        background: radial-gradient(
+          circle,
+          rgba(76, 155, 102, 0.925) 0%,
+          rgba(75, 120, 90, 0.85) 10%,
+          transparent 70%
+        );
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__image-src {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include vp-991 {
+      width: 50%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  &__stores {
+    display: flex;
+    gap: 20px;
+
+    @include vp-991 {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 245px;
+    height: 70px;
+    border: solid 1px var(--color-white);
+    border-radius: 35px;
+    padding: 10px 20px;
+
+    @include vp-1315 {
+      padding: 7px 13px;
+      width: 215px;
+      height: auto;
+    }
+
+    @include vp-991 {
+      width: auto;
+      height: auto;
+      padding: 5px 10px;
+    }
+
+    &-text {
+      @include vp-1315 {
+        font-size: 15px;
+      }
+
+      @include vp-991 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}
