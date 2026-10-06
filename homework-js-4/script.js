@@ -37,6 +37,8 @@ function getTimeOfDay(time) {
 console.log(getTimeOfDay(23));
 
 function findFirstEven(start, end) {
+  if (start > end) return "Некорректные значения";
+  
   for (let i = start; i <= end; i++) {
     if (i % 2 === 0) {
       return i;
