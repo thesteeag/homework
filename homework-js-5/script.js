@@ -55,9 +55,9 @@ function callAllMethods(obj) {
     if (typeof obj[key] === "function") {
       console.log(obj[key]());
     } else {
-      return `${key} не метод`;
+      console.log(`${key} не метод`);
     }
   }
 }
 
-console.log(callAllMethods(myObj));
+callAllMethods(myObj);
