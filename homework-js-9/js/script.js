@@ -60,7 +60,7 @@ const createTodoElement = (text) => {
             <button class="button-complete button">&#10004;</button>
             <button class="button-delete button">&#10006;</button>
           </div>`;
-  return todoEL
+  return todoEl
 };
 
 const handleCreateTodo = (todos, text) => {
