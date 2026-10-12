@@ -60,12 +60,10 @@ const createTodoElement = (text) => {
             <button class="button-complete button">&#10004;</button>
             <button class="button-delete button">&#10006;</button>
           </div>`;
-  return todoEl
+  todosEl.append(todoEl);
 };
 
 const handleCreateTodo = (todos, text) => {
-  const todo = createTodo(todos, text);
-  const todoEl = createTodoElement(text);
-  todosEl.prepend(todoEl);
-  
+  createTodo(todos, text);
+  createTodoElement(text);
 };
