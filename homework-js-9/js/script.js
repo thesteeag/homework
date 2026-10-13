@@ -51,20 +51,48 @@ const deleteTodoById = (todos, todoId) => {
   return todos;
 };
 
-const createTodoElement = (text) => {
+const createTodoElement = (todo) => {
   const todoEl = document.createElement("li");
   todoEl.classList.add("todo");
-
-  todoEl.innerHTML = `          <div class="todo-text">${text}</div>
-          <div class="todo-actions">
-            <button class="button-complete button">&#10004;</button>
-            <button class="button-delete button">&#10006;</button>
-          </div>`;
-  return todoEl
+  todoEl.dataset.id = todo[todoKeys.id];
+  todoEl.innerHTML = `
+  <div class="todo-text">${todo[todoKeys.text]}</div>
+  <div class="todo-actions">
+    <button class="button-complete button">&#10004;</button>
+    <button class="button-delete button">&#10006;</button>
+  </div>`;
+  return todoEl;
 };
 
 const handleCreateTodo = (todos, text) => {
   const todo = createTodo(todos, text);
-  const todoEl = createTodoElement(text);
-  todosEl.prepend(todoEl)
+  const todoEl = createTodoElement(todo);
+  todosEl.prepend(todoEl);
 };
+
+formEL.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const text = inputEl.value.trim();
+  if (!text) return;
+
+  handleCreateTodo(todos, text);
+  inputEl.value = "";
+});
+
+todosEl.addEventListener("click", ({ target }) => {
+  const todo = target.closest(".todo");
+  if (!todo) return;
+
+  const todoId = Number(todo.dataset.id);
+
+  if (target.matches(".button-complete")) {
+    completeTodoById(todos, todoId);
+    todo.classList.toggle("completed");
+  }
+
+  if (target.matches(".button-delete")) {
+    deleteTodoById(todos, todoId);
+    todo.remove();
+  }
+});
