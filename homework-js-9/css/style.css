@@ -120,10 +120,9 @@ body {
 
 .todo.completed {
   opacity: 0.7;
-  text-decoration: line-through;
 }
 
-.todo.completed .todo.text {
+.todo.completed .todo-text {
   text-decoration: line-through;
 }
 
