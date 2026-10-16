@@ -1,8 +1,8 @@
 export function initGauge() {
-  const slider = document.getElementById("gaugeSlider");
-  const fillPath = document.getElementById("gaugeFill");
-  const valueText = document.getElementById("gaugeValue");
-  const badge = document.getElementById("gaugeBadge");
+  const slider = document.querySelector("#gaugeSlider");
+  const fillPath = document.querySelector("#gaugeFill");
+  const valueText = document.querySelector("#gaugeValue");
+  const badge = document.querySelector("#gaugeBadge");
 
   if (!slider || !fillPath || !valueText || !badge) return;
 

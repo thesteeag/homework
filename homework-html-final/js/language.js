@@ -1,6 +1,6 @@
 export default function langBtnClick() {
-  const btn = document.getElementById("langBtn");
-  const dropdown = document.getElementById("langDropdown");
+  const btn = document.querySelector("#langBtn");
+  const dropdown = document.querySelector("#langDropdown");
 
   btn.onclick = (e) => {
     e.stopPropagation();
@@ -9,8 +9,8 @@ export default function langBtnClick() {
 
   dropdown.querySelectorAll(".lang-select__option").forEach((opt) => {
     opt.onclick = () => {
-      document.getElementById("langCurrentText").textContent = opt.dataset.lang;
-      document.getElementById("langCurrentFlag").innerHTML =
+      document.querySelector("#langCurrentText").textContent = opt.dataset.lang;
+      document.querySelector("#langCurrentFlag").innerHTML =
         opt.querySelector("svg").outerHTML;
       dropdown.classList.remove("lang-select__dropdown--open");
     };

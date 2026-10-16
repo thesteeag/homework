@@ -1,4 +1,3 @@
-// Укажите целевую дату окончания таймера
 const targetDate = new Date("2027-02-03T23:59:59").getTime();
 
 export default function updateTimer() {
@@ -16,13 +15,13 @@ export default function updateTimer() {
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
 
-  document.getElementById("days").textContent = String(days).padStart(2, "0");
-  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(
+  document.querySelector("#days").textContent = String(days).padStart(2, "0");
+  document.querySelector("#hours").textContent = String(hours).padStart(2, "0");
+  document.querySelector("#minutes").textContent = String(minutes).padStart(
     2,
     "0",
   );
-  document.getElementById("seconds").textContent = String(seconds).padStart(
+  document.querySelector("#seconds").textContent = String(seconds).padStart(
     2,
     "0",
   );
