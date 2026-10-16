@@ -1,0 +1,174 @@
+@use "../globals/mixin" as *;
+
+.instruments {
+  margin: 0 0 122px 0;
+
+  @include vp-991 {
+    margin: 0 0 10px 0;
+  }
+
+  &__title {
+    font-size: 70px;
+    text-align: center;
+    margin: 0 0 88px 0;
+
+    @include vp-1315 {
+      font-size: 55px;
+      margin: 0 0 50px 0;
+    }
+
+    @include vp-991 {
+      font-size: 25px;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 111px 110px;
+    padding: 108px 84px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    position: relative;
+
+    @include vp-1315 {
+      padding: 58px 28px;
+    }
+
+    @include vp-991 {
+      width: 80%;
+      margin-inline: auto;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 15px 10px;
+      gap: 15px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+    }
+
+    @include vp-575 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+
+    @include vp-991 {
+      gap: 5px;
+    }
+
+    &-img {
+      width: 120px;
+      height: 120px;
+      border: 2px solid var(--color-black);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include vp-991 {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+      }
+    }
+
+    &-icon {
+      width: 47px;
+      height: 47px;
+
+      @include vp-991 {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &-title {
+      font-size: 23px;
+      font-weight: 500;
+
+      @include vp-991 {
+        font-size: 12px;
+      }
+    }
+
+    &-text {
+      font-size: 19px;
+      @include vp-991 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__support {
+    &-btn {
+      position: absolute;
+      right: 0px;
+      top: 370px;
+      border-radius: 5px;
+      display: flex;
+      gap: 2px;
+      flex-direction: column;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      background-color: var(--color-light-black);
+      color: var(--color-white);
+      padding: 5px;
+
+      @include vp-991 {
+        width: 40px;
+        height: 40px;
+        top: 45%;
+      }
+    }
+
+    &-icon {
+      fill: currentColor;
+      width: 100%;
+    }
+
+    &-text {
+      font-size: 13px;
+      line-height: 50%;
+
+      @include vp-991 {
+        font-size: 8px;
+      }
+    }
+  }
+
+  &__up {
+    &-btn {
+      position: absolute;
+      right: 32px;
+      bottom: 38px;
+      display: flex;
+      background-color: var(--color-light-gray);
+      color: var(--color-white);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+
+      @include vp-991 {
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+      }
+    }
+  }
+}
